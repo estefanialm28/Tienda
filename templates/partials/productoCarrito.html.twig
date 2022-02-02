@@ -1,0 +1,19 @@
+<ul class="header-cart-wrapitem w-full">
+{% for producto in productos %}
+	<li class="header-cart-item flex-w flex-t m-b-12">
+		<div class="header-cart-item-img">
+			<img src="{{producto.foto}}" alt="IMG">
+		</div>
+
+		<div class="header-cart-item-txt p-t-8">
+			<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
+				{{producto.nombre}}
+			</a>
+
+		    <span class="header-cart-item-info">
+		        1 x {{producto.precio}}
+		    </span>
+		</div>
+	</li>
+	{% endfor %}
+</ul>
