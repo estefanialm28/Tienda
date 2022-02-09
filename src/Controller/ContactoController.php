@@ -33,7 +33,7 @@ class ContactoController extends AbstractController
             ->add('telefono', TextType::class, ['attr' => ['class' => 'stext-111 cl2 plh3 size-116 p-l-62 p-r-30',
                                                 'placeholder' => 'Tu teléfono']])
 
-            ->add('correo', EmailType::class, ['label' => 'Correo Electronico',
+            ->add('correo', EmailType::class, ['label' => 'Correo Electronico:',
                                                 'attr' => ['class' => 'stext-111 cl2 plh3 size-116 p-l-62 p-r-30',
                                             'placeholder' => 'Correo']])
 
