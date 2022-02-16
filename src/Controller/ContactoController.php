@@ -27,17 +27,16 @@ class ContactoController extends AbstractController
 
         $formulario = $this->createFormBuilder($contacto)
 
-            ->add('nombre', TextType::class, ['attr' => ['class' => 'stext-111 cl2 plh3 size-116 p-l-62 p-r-30',
-                                                'placeholder' => 'Tu nombre']])
+            ->add('nombre', TextType::class, ['label' => 'Nombre:',
+                                                'attr' => ['class' => 'stext-111 cl2 plh3 size-116 p-l-62 p-r-30']])
 
-            ->add('telefono', TextType::class, ['attr' => ['class' => 'stext-111 cl2 plh3 size-116 p-l-62 p-r-30',
-                                                'placeholder' => 'Tu teléfono']])
+            ->add('telefono', TextType::class, ['label' => 'Teléfono:',
+                                            'attr' => ['class' => 'stext-111 cl2 plh3 size-116 p-l-62 p-r-30']])
 
             ->add('correo', EmailType::class, ['label' => 'Correo Electronico:',
-                                                'attr' => ['class' => 'stext-111 cl2 plh3 size-116 p-l-62 p-r-30',
-                                            'placeholder' => 'Correo']])
+                                                'attr' => ['class' => 'stext-111 cl2 plh3 size-116 p-l-62 p-r-30']])
 
-            ->add('asunto', TextareaType::class, [
+            ->add('asunto', TextareaType::class, ['label' => 'Asunto:',
                 'attr' => ['class' => 'stext-111 cl2 plh3 size-120 p-lr-28 p-tb-25',
                             'placeholder' => '¿En qué puedo ayudarte?']])
 

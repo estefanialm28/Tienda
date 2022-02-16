@@ -33,6 +33,7 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="/css/util.css">
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/css/progress-bar.css">
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
@@ -50,7 +51,7 @@
 
 					<div class="right-top-bar flex-w h-full">
 
-						<a href="/login" class="flex-c-m trans-04 p-lr-25">
+						<a href="/login" id="inicio" class="flex-c-m trans-04 p-lr-25">
 							
 							{% if app.user %}
 								{{app.user.email}}
@@ -195,7 +196,9 @@
 			</div>
 		</div>
 	</header>
-
+	<div id="progress_bar_container" class="fixed-top">
+        <div id="progress_bar"></div>
+    </div>
     {% block body %}{% endblock %}
 
     
@@ -210,8 +213,10 @@
 		</span>
 	</div>
 
+	
 <!--===============================================================================================-->	
 	<script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="/vendor/jquery/jquery-ui.min.js"></script>
 <!--===============================================================================================-->
 	<script src="/vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
@@ -310,6 +315,11 @@
 		});
 	</script>
 <!--===============================================================================================-->
+
 	<script src="/js/main.js"></script>
+	<script src="/js/plugin.js"></script>
+	<script src="/js/progress-bar.js"></script>
+	<script src="/js/efecto.js"></script>
+	<script src="/js/ajax.js"></script>
 </body>
 </html>
