@@ -4,7 +4,8 @@ window.onload = function(){
             XMLHttpRequestObject = new XMLHttpRequest();
         }
     
-    document.getElementById('boton').onclick = sacardatos
+    document.getElementById('boton').onmouseover = sacardatos
+    document.getElementById('boton').onmouseout = vaciar
     
     }
     
@@ -12,15 +13,17 @@ window.onload = function(){
     
     function sacardatos(){
         if(XMLHttpRequestObject) {
-     
-            XMLHttpRequestObject.open("GET", "./respuesta.txt");
+            XMLHttpRequestObject.open("GET", "/html/terminos.txt");
             XMLHttpRequestObject.onreadystatechange = function(){
         if (XMLHttpRequestObject.readyState == 4 &&                   
             XMLHttpRequestObject.status == 200) {
             document.getElementById("contenedor").innerHTML = XMLHttpRequestObject.responseText;
             }
-      
         }
         XMLHttpRequestObject.send(null);
         } 
+    }
+
+    function vaciar(){
+        document.getElementById("contenedor").innerHTML = "";
     }

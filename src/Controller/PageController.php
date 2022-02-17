@@ -63,4 +63,17 @@ class PageController extends AbstractController
     }
 
     
+    /**
+     * @Route("/cabecera", name="cabecera")
+     */
+    /*
+    public function mostrarCabecera(ManagerRegistry $doctrine)
+    {
+        $repositorio = $doctrine->getRepository(Cabecera::class);
+
+        $cabeceras = $repositorio->findAll();
+
+        return $this->render('cabecera.html.twig', ['cabeceras' => $cabeceras]);
+    }
+    */
 }

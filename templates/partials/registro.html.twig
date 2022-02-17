@@ -21,21 +21,25 @@
 					<br>
 					<label for="password">Contraseña:</label>
 					<div class="input-group">
-						<img class="input-group-addon" src="/images/icons/icon-email.png" alt="ICON">
+						<img class="input-group-addon" src="/images/icons/icon-pass.png" alt="ICON">
 						{{ form_row(registrationForm.plainPassword) }}
 					</div>	
 					<br>
 						
 							{{ form_row(registrationForm.agreeTerms) }}
 					<br>
+					<input type = "button" value = "Leer términos y condiciones" id="boton">
+					<div id="contenedor"></div>
 					<div class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
 						<button type="submit" class="btn">Register</button>
+					<br>
 					</div>
     				{{ form_end(registrationForm) }}
 				</div>
-
+				
 				
 			</div>
+				
 		</div>
 	</section>	
 
