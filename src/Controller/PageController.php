@@ -9,6 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\Persistence\ManagerRegistry;
 use App\Entity\Categoria;
 use App\Entity\Producto;
+use App\Entity\Cabecera;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 class PageController extends AbstractController
@@ -20,15 +21,15 @@ class PageController extends AbstractController
     public function inicio(ManagerRegistry $doctrine)
     {
         $repositorio = $doctrine->getRepository(Categoria::class);
-
         $categorias = $repositorio->findAll();
 
         $repositorioProd = $doctrine->getRepository(Producto::class);
-
         $productos = $repositorioProd->findAll();
-        
-        
-        return $this->render('index.html.twig', ['categorias' => $categorias, 'productos' => $productos]);
+
+        $repositorioCabecera = $doctrine->getRepository(Cabecera::class);
+        $cabeceras = $repositorioCabecera->findAll();
+
+        return $this->render('index.html.twig', ['categorias' => $categorias, 'productos' => $productos, 'cabeceras' => $cabeceras]);
     }
 
     /**
@@ -63,17 +64,4 @@ class PageController extends AbstractController
     }
 
     
-    /**
-     * @Route("/cabecera", name="cabecera")
-     */
-    /*
-    public function mostrarCabecera(ManagerRegistry $doctrine)
-    {
-        $repositorio = $doctrine->getRepository(Cabecera::class);
-
-        $cabeceras = $repositorio->findAll();
-
-        return $this->render('cabecera.html.twig', ['cabeceras' => $cabeceras]);
-    }
-    */
 }

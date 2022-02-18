@@ -25,12 +25,12 @@ class Cabecera
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $Titulo;
+    private $titulo;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $Descripcion;
+    private $descripcion;
 
     public function getId(): ?int
     {
@@ -51,24 +51,24 @@ class Cabecera
 
     public function getTitulo(): ?string
     {
-        return $this->Titulo;
+        return $this->titulo;
     }
 
-    public function setTitulo(string $Titulo): self
+    public function setTitulo(string $titulo): self
     {
-        $this->Titulo = $Titulo;
+        $this->titulo = $titulo;
 
         return $this;
     }
 
     public function getDescripcion(): ?string
     {
-        return $this->Descripcion;
+        return $this->descripcion;
     }
 
-    public function setDescripcion(string $Descripcion): self
+    public function setDescripcion(string $descripcion): self
     {
-        $this->Descripcion = $Descripcion;
+        $this->descripcion = $descripcion;
 
         return $this;
     }
