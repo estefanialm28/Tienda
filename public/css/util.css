@@ -3715,3 +3715,10 @@ iframe {border: none;}
 #carrito{
     color: #000000;
 }
+
+#copyright{
+	width: 10%;
+  	height: 10%;
+	  display:block;
+	  margin:auto;
+}
