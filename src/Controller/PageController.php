@@ -43,11 +43,13 @@ class PageController extends AbstractController
         $categoria = $repositorio->find($id);
 
         $repositorioProd = $doctrine->getRepository(Producto::class);
-
         $productos = $repositorioProd->findBy(['categoria' => $id]);
+
+        $repositorioCabecera = $doctrine->getRepository(Cabecera::class);
+        $cabeceras = $repositorioCabecera->findAll();
         
         
-        return $this->render('index.html.twig', ['categorias' => $categorias, 'productos' => $productos]);
+        return $this->render('index.html.twig', ['categorias' => $categorias, 'productos' => $productos, 'cabeceras' => $cabeceras]);
     }
 
     /**

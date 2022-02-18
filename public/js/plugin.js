@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    jQuery.fn.añadirVerde = function() {
+    jQuery.fn.añadirMorado = function() {
        
         this.each(function(){
        
@@ -11,6 +11,6 @@ $(document).ready(function(){
      }; 
      
      $(".top-bar").mouseover(function(){
-        $(".top-bar").añadirVerde(); 
+        $(".top-bar").añadirMorado(); 
     });
 });
