@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 09, 2022 at 10:37 AM
+-- Generation Time: Feb 18, 2022 at 09:14 AM
 -- Server version: 8.0.27-0ubuntu0.20.04.1
 -- PHP Version: 7.4.3
 
@@ -21,6 +21,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `tiendaropa`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cabecera`
+--
+
+CREATE TABLE `cabecera` (
+  `id` int NOT NULL,
+  `url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `titulo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `descripcion` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `cabecera`
+--
+
+INSERT INTO `cabecera` (`id`, `url`, `titulo`, `descripcion`) VALUES
+(1, './images/slide-01.jpg', 'Colección Mujer 2022', 'Nueva Colección'),
+(2, './images/slide-02.jpg', 'Colección Nueva Temporada', 'Chaquetas y Abrigos'),
+(3, './images/slide-03.jpg', 'Colección Hombre 2022', 'Nueva Colección');
 
 -- --------------------------------------------------------
 
@@ -66,7 +88,8 @@ INSERT INTO `contacto` (`id`, `nombre`, `correo`, `telefono`, `asunto`) VALUES
 (2, 'asdasd', 'v@v.com', '<zx<x', 'asdasd'),
 (3, 'Janira', 'janira@gmail.com', '1234567889', 'Clase'),
 (4, 'Janira', 'janira@gmail.com', '1234567889', 'Clase'),
-(5, 'Alex', 'alex@gmail.com', '2369432', 'Hola');
+(5, 'Alex', 'alex@gmail.com', '2369432', 'Hola'),
+(6, 'raimon', 'raimon@gmail.com', '12345', 'adios');
 
 -- --------------------------------------------------------
 
@@ -143,6 +166,12 @@ INSERT INTO `user` (`id`, `email`, `roles`, `password`) VALUES
 --
 
 --
+-- Indexes for table `cabecera`
+--
+ALTER TABLE `cabecera`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `categoria`
 --
 ALTER TABLE `categoria`
@@ -179,6 +208,12 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `cabecera`
+--
+ALTER TABLE `cabecera`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `categoria`
 --
 ALTER TABLE `categoria`
@@ -188,7 +223,7 @@ ALTER TABLE `categoria`
 -- AUTO_INCREMENT for table `contacto`
 --
 ALTER TABLE `contacto`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `producto`
