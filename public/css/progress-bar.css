@@ -5,8 +5,8 @@
     position: fixed;
 }
 
-    #progress_bar {
-        height: 8px;
-        background: #3f0064;
-        width: 0%;
-    }
+#progress_bar {
+    height: 8px;
+    background: #3f0064;
+     width: 0%;
+}
